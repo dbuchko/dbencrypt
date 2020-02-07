@@ -12,4 +12,5 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
     hibernate:
       ddl-auto: update
-
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver

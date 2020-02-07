@@ -3,8 +3,8 @@ applications:
 - name: dbencrypt
   memory: 1G
   instances: 1
-  random-route: true
   path: target/dbencrypt-0.0.1-SNAPSHOT.jar
   buildpack: java_buildpack_offline
   services:
   - myappdb
+  - mycredhub
