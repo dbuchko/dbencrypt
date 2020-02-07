@@ -14,6 +14,7 @@ public class Person {
 
     private String firstName;
     private String lastName;
+    private String piidata;
 
     public String getFirstName() {
         return firstName;
@@ -30,4 +31,13 @@ public class Person {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public String getPiidata() {
+        return piidata;
+    }
+
+    public void setPiidata(String piidata) {
+        this.piidata = piidata;
+    }
+
 }
