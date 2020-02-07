@@ -1,9 +1,8 @@
 package io.pivotal.demo.dbencrypt.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import io.pivotal.demo.dbencrypt.utils.AttributeEncryptor;
+
+import javax.persistence.*;
 
 @Entity
 public class Person {
@@ -14,6 +13,8 @@ public class Person {
 
     private String firstName;
     private String lastName;
+
+    @Convert(converter = AttributeEncryptor.class)
     private String piiData;
 
     public String getFirstName() {
