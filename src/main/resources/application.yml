@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    show-sql: true
+
+---
+spring:
+  profiles: cloud
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+
