@@ -2,6 +2,9 @@ spring:
   jpa:
     show-sql: true
 
+dbencrypt:
+  encryption-secret: local-secret-key-12345
+
 ---
 spring:
   profiles: cloud
@@ -14,3 +17,6 @@ spring:
       ddl-auto: update
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+dbencrypt:
+  encryption-secret: ${vcap.services.mycredhub.encryption-secret}

@@ -1,5 +1,6 @@
 package io.pivotal.demo.dbencrypt.utils;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.BadPaddingException;
@@ -15,7 +16,9 @@ import java.util.Base64;
 public class AttributeEncryptor implements AttributeConverter<String, String> {
 
     private static final String AES = "AES";
-    private static final String SECRET = "secret-key-12345";
+
+//    @Value("${dbencrypt.encryption-secret}")
+    private static String SECRET="123";
 
     private final Key key;
     private final Cipher cipher;
