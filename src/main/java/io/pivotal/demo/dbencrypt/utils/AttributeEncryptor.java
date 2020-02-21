@@ -18,7 +18,7 @@ public class AttributeEncryptor implements AttributeConverter<String, String> {
     private static final String AES = "AES";
 
 //    @Value("${dbencrypt.encryption-secret}")
-    private static String SECRET="123";
+    private static String SECRET="secret-1234567890";
 
     private final Key key;
     private final Cipher cipher;
