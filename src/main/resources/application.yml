@@ -2,8 +2,9 @@ spring:
   jpa:
     show-sql: true
 
+### Note: encryption-secret must be 16, 24, or 32 bytes
 dbencrypt:
-  encryption-secret: local-secret-key-12345
+  encryption-secret: local-secret-123
 
 ---
 spring:
